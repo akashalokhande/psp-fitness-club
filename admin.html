@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link
+      rel="icon"
+      href="./images/ChatGPT Image Apr 18, 2025, 02_48_19 PM.png"
+      type="image/png"
+    />
+    <title>Admin Dashboard - Submissions</title>
+    <link rel="stylesheet" href="./css/admin.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo-container">
+        <a href="./admin.html">
+          <img
+            src="./images/Screenshot 2025-03-11 213914.png"
+            alt="Fitness Club Logo"
+            class="logo"
+          />
+        </a>
+        <h1>Fitness Club</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li id="loginLink"><a href="login.html">Log In</a></li>
+          <li id="signupLink"><a href="signup.html">Sign Up</a></li>
+          <li id="adminLoginLink">
+            <a href="admin-login.html">Admin Login</a>
+          </li>
+          <li id="classesbtn" style="display: none">
+            <a href="classes.html">Classes</a>
+          </li>
+          <li id="userName" style="display: none; color: green"></li>
+          <li id="logoutBtn" style="display: none;">
+            Logout
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <h2>Admin Dashboard</h2>
+
+    <!-- Payment Submissions Table -->
+    <h3>Payment Submissions</h3>
+    <table id="paymentTable">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Contact Number</th>
+          <th>Plan</th>
+          <th>Paid</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Payment data goes here -->
+      </tbody>
+    </table>
+
+    <!-- Contact Submissions Table -->
+    <h3>Contact Submissions</h3>
+    <table id="contactTable">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Contact Number</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Contact data goes here -->
+      </tbody>
+    </table>
+    <footer class="main-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 PSP Fitness Club. All rights reserved.</p>
+      </div>
+    </footer>
+  <script src="./js/admin.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Fitness Club</title>
+    <link
+    rel="icon"
+    href="./images/ChatGPT Image Apr 18, 2025, 02_48_19 PM.png"
+    type="image/png"
+  />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo-container">
+       <a href="./index.html">
+        <img
+          src="./images/Screenshot 2025-03-11 213914.png"
+          alt="Fitness Club Logo"
+          class="logo"
+        />
+      </a>
+        <h1>Fitness Club</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li id="loginLink"><a href="login.html">Log In</a></li>
+          <li id="signupLink"><a href="signup.html">Sign Up</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li id="adminLoginLink"><a href="admin-login.html">Admin Login</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li id="classesbtn" style="display: none"><a href="classes.html">Classes</a></li>
+          <li id="userDropdown" class="dropdown" style="display: none;">
+            <a href="#" class="dropbtn" id="userDropdownBtn">👤 User</a>
+            <div class="dropdown-content" id="dropdownContent">
+              <p id="dropdownUsername">Name: -</p>
+              <p id="dropdownUserPlan">Plan: -</p>
+            </div>
+          </li>
+          <li id="logoutBtn" style="display: none;">Logout</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>PSP FITNESS CLUB</h2>
+      <p>
+        3rd floor, Crystal vastu gut no 142, AYYAPPA TEMPLE RAOD, P 02, Beed
+        Bypass Rd, nearby SBI ATM, Satara Deolai Parisar, Chhatrapati Sambhaji
+        Nagar, Maharashtra 431010
+      </p>
+
+      <h3>Contact Us</h3>
+      <form id="contactForm">
+        <label for="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          required
+          placeholder="Enter your first name"
+        />
+
+        <label for="lastName">Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          required
+          placeholder="Enter your last name"
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="Enter your email"
+        />
+
+        <label for="number">Number:</label>
+        <input
+          type="text"
+          id="number"
+          required
+          placeholder="Enter your contact number"
+        />
+
+        <button type="submit">Contact</button>
+        <p id="contactMessage"></p>
+      </form>
+    </main>
+    <footer class="main-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 PSP Fitness Club. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="./js/contact.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>

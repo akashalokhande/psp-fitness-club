@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link
+      rel="icon"
+      href="./images/ChatGPT Image Apr 18, 2025, 02_48_19 PM.png"
+      type="image/png"
+    />
+    <title>Log In - Fitness Club</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="logo-container">
+        <a href="./index.html">
+          <img
+            src="./images/Screenshot 2025-03-11 213914.png"
+            alt="Fitness Club Logo"
+            class="logo"
+          />
+        </a>
+        <h1>Fitness Club</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li id="loginLink"><a href="login.html">Log In</a></li>
+          <li id="signupLink"><a href="signup.html">Sign Up</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li id="adminLoginLink">
+            <a href="admin-login.html">Admin Login</a>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li id="classesbtn" style="display: none">
+            <a href="classes.html">Classes</a>
+          </li>
+          <li id="userDropdown" class="dropdown" style="display: none">
+            <a href="#" class="dropbtn" id="userDropdownBtn">👤 User</a>
+            <div class="dropdown-content" id="dropdownContent">
+              <p id="dropdownUsername">Name: -</p>
+              <p id="dropdownUserPlan">Plan: -</p>
+            </div>
+          </li>
+          <li id="logoutBtn" style="display: none; cursor: pointer; color: red">
+            Logout
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Log In</h2>
+      <form id="loginForm">
+        <label for="email">Email / Username:</label>
+        <input
+          type="text"
+          id="email"
+          placeholder="Enter your email or username"
+          required
+          autocomplete="username"
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+          autocomplete="current-password"
+        />
+
+        <button type="submit">Log In</button>
+      </form>
+
+      <p id="loginMessage" style="color: red; margin-top: 10px"></p>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 PSP Fitness Club. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./js/login.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>

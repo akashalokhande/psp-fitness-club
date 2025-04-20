@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Your Payment - Fitness Club</title>
+    <link rel="stylesheet" href="./css/payment.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo-container">
+        <a href="./index.html">
+          <img src="./images/Screenshot 2025-03-11 213914.png" alt="Fitness Club Logo" class="logo" />
+        </a>
+        <h1>Fitness Club</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li id="loginLink"><a href="login.html">Log In</a></li>
+          <li id="signupLink"><a href="signup.html">Sign Up</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li id="adminLoginLink"><a href="admin-login.html">Admin Login</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li id="classesbtn" style="display: none"><a href="classes.html">Classes</a></li>
+          <li id="userDropdown" class="dropdown" style="display: none">
+            <a href="#" class="dropbtn" id="userDropdownBtn">👤 User</a>
+            <div class="dropdown-content" id="dropdownContent">
+              <p id="dropdownUsername">Name: -</p>
+              <p id="dropdownUserPlan">Plan: -</p>
+            </div>
+          </li>
+          <li id="logoutBtn" style="display: none;">Logout</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Complete Your Payment</h2>
+
+      <div class="payment-container">
+        <!-- Form -->
+        <form id="paymentForm" class="payment-form">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" placeholder="Enter first name" />
+
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" placeholder="Enter last name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter email" />
+
+          <label for="number">Number:</label>
+          <input type="text" id="number" placeholder="Enter contact number" />
+
+          <p id="statusMsg" style="margin-bottom: 10px; color: red;"></p>
+
+          <button type="submit" class="pay-now-btn">Pay Now</button>
+        </form>
+
+        <!-- Plan selection -->
+        <section class="amount-options">
+          <p>Select your membership plan:</p>
+          <button onclick="selectPlan(300, '1 Month')">₹300 (1 Month)</button>
+          <button onclick="selectPlan(1500, '6 Months')">₹1500 (6 Months)</button>
+          <button onclick="selectPlan(6000, '1 Year')">₹6000 (1 Year)</button>
+          <button onclick="selectPlan(0, 'Trial (3 Days)')">Free Trial (3 Days)</button>
+          <p id="selectedPlanDisplay"></p>
+        </section>
+      </div>
+
+      <!-- Success Popup -->
+      <div id="successPopup" class="popup-overlay" style="display: none">
+        <div class="popup-content">
+          <h3 id="successmsg">✅</h3>
+          <p>Thank you for joining the Fitness Club.</p>
+          <button onclick="closePopup()">OK</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 PSP Fitness Club. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- External JS file -->
+     <script src="./js/header.js"></script>
+    <script src="./js/payment.js"></script>
+  </body>
+</html>

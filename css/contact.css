@@ -1,0 +1,99 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+/* Set up full height layout */
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Background */
+body {
+  background-image: url("../images/bg110.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Main layout */
+main {
+  padding: 20px;
+  width: 600px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+
+form {
+  margin: 10px auto;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #333;
+  color: #ece6e6;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555555;
+}
+
+/* Footer Style */
+footer {
+  background-color: #d5cdcd;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+/* Align the entire main section to the left */
+main {
+  margin: 0; 
+  padding: 30px; 
+  text-align: left; 
+  width: 600px; 
+  float: center; 
+}
+label {
+  color: #ffffff;
+}
+h1,
+h2,
+p {
+  color: #000000;
+  float: center;
+  background-color: #ffffff;
+}
+h2 {
+  background-color: lightblue;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+
+h3 {
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+}
+a:hover {
+  color: rgb(209, 27, 27); 
+}

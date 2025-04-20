@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link
+    rel="icon"
+    href="./images/ChatGPT Image Apr 18, 2025, 02_48_19 PM.png"
+    type="image/png"
+  />
+    <title>Sign Up - Fitness Club</title>
+    <link rel="stylesheet" href="./css/signup.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo-container">
+        <a href="./index.html">
+          <img
+            src="./images/Screenshot 2025-03-11 213914.png"
+            alt="Fitness Club Logo"
+            class="logo"
+          />
+        </a>
+        <h1>Fitness Club</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li id="loginLink"><a href="login.html">Log In</a></li>
+        <li id="signupLink"><a href="signup.html">Sign Up</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li id="adminLoginLink"><a href="admin-login.html">Admin Login</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li id="classesbtn" style="display: none">
+          <a href="classes.html">Classes</a>
+        </li>
+        <li id="userName" style="display: none; color: green"></li>
+        <li id="logoutBtn" style="display: none; cursor: pointer; color: red">
+          Logout
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Create a password"
+          required
+        />
+
+        <button type="submit">Sign Up</button>
+      </form>
+      <p id="message" style="color: green; margin-top: 10px"></p>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 PSP Fitness Club. All rights reserved.</p>
+      </div>
+    </footer>
+
+   
+    <script src="./js/signup.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>

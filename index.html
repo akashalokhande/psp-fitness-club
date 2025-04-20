@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./images/ChatGPT Image Apr 18, 2025, 02_48_19 PM.png"
+      type="image/png"
+    />
+
+    <title>Fitness Club - Home</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo-container">
+        <a href="./index.html">
+          <img
+            src="./images/Screenshot 2025-03-11 213914.png"
+            alt="Fitness Club Logo"
+            class="logo"
+          />
+        </a>
+
+        <h1>Fitness Club</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li id="loginLink"><a href="login.html">Log In</a></li>
+          <li id="signupLink"><a href="signup.html">Sign Up</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li id="adminLoginLink">
+            <a href="admin-login.html">Admin Login</a>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li id="classesbtn" style="display: none">
+            <a href="classes.html">Classes</a>
+          </li>
+          <li id="userDropdown" class="dropdown" style="display: none">
+            <a href="#" class="dropbtn" id="userDropdownBtn">👤 User</a>
+            <div class="dropdown-content" id="dropdownContent">
+              <p id="dropdownUsername">Name: -</p>
+              <p id="dropdownUserPlan">Plan: -</p>
+            </div>
+          </li>
+          <li id="logoutBtn" style="display: none;">
+            Logout
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="welcome-container">
+        <h2>Welcome to Fitness Club</h2>
+        <p>
+          Achieve your fitness goals with us! Explore our state-of-the-art
+          facilities and expert guidance.
+        </p>
+      </div>
+    </main>
+    <p
+      id="buyPlanMessage"
+      style="
+        display: none;
+        background-color: #ffe0e0;
+        color: #b30000;
+        padding: 10px 15px;
+        border: 1px solid #ffb3b3;
+        border-radius: 8px;
+        font-weight: 500;
+        max-width: 300px;
+        margin: 10px auto;
+        text-align: center;
+      "
+    >
+      ⚠️ Buy a plan to access the classes.
+    </p>
+
+    <div class="membership-section">
+      <div class="plans">
+        <div class="plan">
+          <p>FOR 1 MONTH</p>
+          <p>300/-</p>
+          <button class="join-btn" data-plan="1-month">Join Now</button>
+        </div>
+        <div class="plan">
+          <p>FOR 6 MONTH</p>
+          <p>1500/-</p>
+          <button class="join-btn" data-plan="6-month">Join Now</button>
+        </div>
+        <div class="plan">
+          <p>FOR 1 YEAR</p>
+          <p>6000/-</p>
+          <button class="join-btn" data-plan="1-year">Join Now</button>
+        </div>
+      </div>
+
+      <div class="trial-section">
+        <p class="trial-text">Get free trial for three days</p>
+        <button class="trial-button join-btn">TRY NOW</button>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 PSP Fitness Club. All rights reserved.</p>
+      </div>
+    </footer>
+   
+    <script src="./js/main.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>
