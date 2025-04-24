@@ -138,12 +138,43 @@
   color: #000;
 }
 
-/* Responsive Tweak */
+/* Hamburger & Close Button Container */
+.hamburger-container {
+  position: relative;
+  margin-left: auto;
+}
+
+/* Hamburger and Close Buttons */
+.hamburger,
+.close-btn {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+  background: transparent;
+  border: none;
+  text-align: center;
+  z-index: 101;
+}
+
+/* Responsive Tweaks */
+
+/* Medium devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .main-header {
+    padding: 15px 20px;
+    justify-content: space-between;
+  }
+
+  .logo-container h1 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
   .main-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
+    flex-wrap: wrap;
   }
 
   .nav-links {
@@ -151,10 +182,76 @@
     width: 100%;
     gap: 10px;
     margin-top: 10px;
+    display: none; /* Initially hide the nav links */
+  }
+
+  .nav-links.active {
+    display: block; /* Show when hamburger is clicked */
   }
 
   .nav-links li a {
     display: block;
     width: 100%;
+  }
+
+  .hamburger,
+  .close-btn {
+    display: block;
+    position: absolute;
+   
+  }
+
+  .hamburger{
+    top: -20px;
+    right: 10px;
+  }
+  .close-btn{
+    top: -10px;
+    right: 0px;
+  }
+  .hamburger.active {
+    display: none;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  .close-btn.active {
+    display: block;
+  }
+
+  /* Dropdown adjustments for mobile */
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .dropbtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Small devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .logo-container h1 {
+    font-size: 20px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  #logoutBtn {
+    font-size: 14px;
+    padding: 6px 10px;
   }
 }

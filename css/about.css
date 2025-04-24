@@ -1,39 +1,32 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body and background */
 body {
-  background-image: url("../images/bg0.jpg"), url("../images/bg09.jpg"); 
-  background-size: 100% 50%, 100% 50%; 
+  background-image: url("../images/bg0.jpg"), url("../images/bg09.jpg");
+  background-size: 100% 50%, 100% 50%;
   background-repeat: no-repeat;
-  background-position: top, bottom; 
-  margin: 0; 
-  height: 100vh; 
-}
-
-/* Set up full height layout */
-html,
-body {
-  height: 100%;
+  background-position: top, bottom;
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-}
-
-/* Background */
-body {
-  font-family: Arial, sans-serif;
 }
 
 /* Main layout */
 main {
   padding: 20px;
-  width: 600px;
-  margin-top: 20px;
-  margin-left: 30px;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto 0 30px;
+  text-align: left;
 }
 
-/* Header Style */
+/* Header style */
 header {
   background-color: #ffffff;
   color: #070707;
@@ -65,7 +58,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Section Styles */
+/* Sections */
 section {
   padding: 20px;
   text-align: center;
@@ -76,6 +69,7 @@ section h2 {
   color: #f5eded;
 }
 
+/* Forms */
 form {
   margin: 10px auto;
   max-width: 300px;
@@ -102,43 +96,106 @@ button:hover {
   background-color: #555;
 }
 
-/* Align the entire main section to the left */
-main {
-  margin: 0; 
-  padding: 20px; 
-  text-align: left; 
-  width: 300px; 
-  float: left; 
-}
 h2 {
   color: #ffffff;
   background: rgba(0, 0, 0, 0.6);
 }
+
 p {
   color: rgb(58, 5, 5);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
 }
+
+/* Text section */
 .text-section {
   padding: 20px;
   margin-top: 215px;
 }
+
+/* Diet plan layout */
 .diet-plan {
-  column-count: 2; 
-  column-gap: 20px; 
+  column-count: 2;
+  column-gap: 20px;
 }
+
 .diet-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .day {
-  flex: 1 1 calc(50% - 20px); 
+  flex: 1 1 calc(50% - 20px);
 }
 
-a:hover {
-  color: rgb(209, 27, 27); 
-}
+/* Typography and links */
 h1,
 p {
   background: rgba(255, 255, 255, 0.6);
-  font-size: 30hspx;
+  font-size: 30px;
+}
+
+a:hover {
+  color: rgb(209, 27, 27);
+}
+
+/* ---------- Responsive Enhancements ---------- */
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .diet-plan {
+    column-count: 1;
+    column-gap: 15px; /* Slightly reduce gap for small screens */
+  }
+
+  .diet-container {
+    flex-direction: column;
+  }
+
+  .day {
+    flex: 1 1 100%;
+    margin-bottom: 20px; /* Add some spacing between days */
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  /* Adjust section padding for small devices */
+  section {
+    padding: 15px;
+  }
 }

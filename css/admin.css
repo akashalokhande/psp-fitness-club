@@ -4,21 +4,55 @@ body {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
 h2,
 h3 {
   text-align: center;
 }
+
+/* Table styles */
 table {
   width: 90%;
   border-collapse: collapse;
   margin: 30px auto;
+  overflow-x: auto;
 }
+
 th,
 td {
   padding: 12px;
   border: 1px solid #ccc;
   text-align: left;
 }
+
 th {
   background-color: #f0f0f0;
+}
+
+/* ---------- Responsive Enhancements ---------- */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Wrap table in a scrollable container */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    font-size: 13px;
+    padding: 8px;
+  }
 }

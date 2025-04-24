@@ -1,30 +1,33 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Background */
-  body {
-    background-image: url("../images/bg140.jpg");
-    background-size: cover;
-    background-position: center;
-    font-family: Arial, sans-serif;
-  }
-  
-main {
-    padding: 20px;
-    text-align: left;
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto 0 30px;
-  }
-  
 
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background */
+body {
+  background-image: url("../images/bg140.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Main section */
+main {
+  padding: 20px;
+  text-align: left;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto 0 30px;
+}
+
+/* Form styling */
 form {
   margin: 10px auto;
   max-width: 400px;
@@ -58,21 +61,45 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
-/* Align the entire main section to the left */
-main {
-  margin: 0; 
-  padding: 20px; 
-  text-align: left;
-  width: 600px; 
-  float: left; 
-}
+
 label {
   color: #fefcfc;
 }
+
 h2 {
   color: #fdfbfb;
   text-align: center;
 }
+
 a:hover {
   color: rgb(209, 27, 27); 
+}
+
+/* ---------- Responsive Enhancements ---------- */
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+    margin: 20px auto;
+    float: none;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  input,
+  button {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
 }

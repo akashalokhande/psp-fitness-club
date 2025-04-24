@@ -4,24 +4,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-image: url("../images/gym-workout-abstract-background-sports-concept-gym-workout-abstract-background-sports-concept-343807718.webp");
   background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
+/* Container */
 .admin-login {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 83vh;
+  padding: 20px;
 }
 
 /* Heading */
 h2 {
   margin-bottom: 20px;
-  color:#fff;
+  color: #fff;
+  text-align: center;
 }
 
 /* Login form */
@@ -68,4 +73,21 @@ button:hover {
   font-size: 14px;
   color: red;
   margin-top: 10px;
+}
+
+/* ---------- Responsive Enhancements ---------- */
+@media (max-width: 480px) {
+  form {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  button {
+    font-size: 15px;
+    padding: 10px;
+  }
 }

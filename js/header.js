@@ -107,3 +107,19 @@ if (
 if (isAdmin && currentPath.includes("admin-login.html")) {
   window.location.href = "admin.html";
 }
+
+const hamburger = document.getElementById("hamburgerBtn");
+const closeBtn = document.getElementById("closeBtn");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.add("active");
+  hamburger.style.display = "none";
+  closeBtn.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+  closeBtn.style.display = "none";
+  hamburger.style.display = "block";
+});

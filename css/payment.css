@@ -151,6 +151,18 @@ main h2 {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .payment-container {
+    gap: 20px;
+  }
+
+  .payment-form,
+  .amount-options {
+    flex: 1;
+    min-width: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .payment-container {
     flex-direction: column;
@@ -159,5 +171,30 @@ main h2 {
 
   .pay-now-btn {
     width: 100%;
+  }
+
+  /* Adjust the popup content width for mobile */
+  .popup-content {
+    padding: 20px 30px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-form input {
+    font-size: 14px;
+  }
+
+  .amount-options button {
+    font-size: 14px;
+  }
+
+  .pay-now-btn {
+    font-size: 14px;
+    padding: 12px 25px;
+  }
+
+  .popup-content {
+    padding: 15px 25px;
   }
 }

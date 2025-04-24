@@ -22,7 +22,7 @@
   <body>
     <header class="main-header">
       <div class="logo-container">
-        <a href="./admin.html">
+        <a href="./index.html">
           <img
             src="./images/Screenshot 2025-03-11 213914.png"
             alt="Fitness Club Logo"
@@ -31,22 +31,40 @@
         </a>
         <h1>Fitness Club</h1>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li id="loginLink"><a href="login.html">Log In</a></li>
-          <li id="signupLink"><a href="signup.html">Sign Up</a></li>
-          <li id="adminLoginLink">
-            <a href="admin-login.html">Admin Login</a>
-          </li>
-          <li id="classesbtn" style="display: none">
-            <a href="classes.html">Classes</a>
-          </li>
-          <li id="userName" style="display: none; color: green"></li>
-          <li id="logoutBtn" style="display: none;">
-            Logout
-          </li>
-        </ul>
-      </nav>
+
+      <div>
+        <!-- Hamburger Button for mobile -->
+        <div class="hamburger-container">
+          <div class="hamburger" id="hamburgerBtn">&#9776;</div>
+          <div class="close-btn" id="closeBtn" style="display: none">
+            &times;
+          </div>
+        </div>
+
+        <nav style="padding-top:20px;"> 
+          <ul class="nav-links" id="navLinks">
+            <li id="loginLink"><a href="login.html">Log In</a></li>
+            <li id="signupLink"><a href="signup.html">Sign Up</a></li>
+
+            <li id="adminLoginLink">
+              <a href="admin-login.html">Admin Login</a>
+            </li>
+
+            <li id="classesbtn" style="display: none">
+              <a href="classes.html">Classes</a>
+            </li>
+            <li id="userDropdown" class="dropdown" style="display: none">
+              <a href="#" class="dropbtn" id="userDropdownBtn">👤 User</a>
+              <div class="dropdown-content" id="dropdownContent">
+                <p id="dropdownUsername">Name: -</p>
+                <p id="dropdownUserPlan">Plan: -</p>
+              </div>
+            </li>
+            <li id="userName" style="display: none; color: green"></li>
+            <li id="logoutBtn" style="display: none">Logout</li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <h2>Admin Dashboard</h2>
@@ -91,7 +109,7 @@
         <p>&copy; 2025 PSP Fitness Club. All rights reserved.</p>
       </div>
     </footer>
-  <script src="./js/admin.js"></script>
+    <script src="./js/admin.js"></script>
     <script src="./js/header.js"></script>
   </body>
 </html>

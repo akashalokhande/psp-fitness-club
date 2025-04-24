@@ -1,6 +1,7 @@
 * {
   margin: 0%;
   padding: 0%;
+  box-sizing: border-box;
 }
 
 /* Section Styles */
@@ -42,18 +43,21 @@ button:hover {
 
 /* Align the entire main section to the left */
 main {
-  margin: 0; 
-  padding: 20px; 
-  text-align: left; 
-  width: 300px; 
-  float: left; 
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  width: 300px;
+  float: left;
 }
+
 label {
   color: #ffffff;
 }
+
 h2 {
   color: #ffffff;
 }
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
@@ -61,24 +65,31 @@ body {
   height: 100%;
 }
 
+/* Class card layout */
 .class-container {
+  position: relative;
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: 20px;
   align-items: center;
   background: white;
   padding: 10px;
-  margin: 15px 0;
-  border-radius: 8px;
+  margin: 20px auto;
+  border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 800px;
+  width: 90%;
+  overflow: hidden;
 }
 
 .class-container img {
   width: 100%;
-  height: 100px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
   border-radius: 5px;
 }
+
 .class-info h2 {
   margin: 0;
   font-size: 20px;
@@ -91,24 +102,15 @@ body {
   color: #555;
 }
 
-.class-container img {
-  width: 800px !important;
-  height: 400px !important;
-}
-.image-container {
-  width: 100% !important;
-  max-width: 800px !important;
-}
+/* Image container */
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.image-container {
-  position: relative;
-  display: inline-block;
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .background-image {
@@ -117,61 +119,27 @@ body {
   display: block;
 }
 
-.overlay-text {
-  position: absolute;
-  top: 20%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 30px;
-  border-radius: 35px;
-  text-align: left;
-}
-
-h2,
-p {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-/* Class container to hold the image and text */
-.class-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px; 
-  margin: 20px auto;
-  border-radius: 10px;
-  overflow: hidden; 
-}
-
-/* Ensure image covers the full container without leaving space */
-.class-container img {
-  width: 100%;
-  height: 250px; 
-  object-fit: cover; 
-  display: block;
-}
-
-/* Overlay text to appear on the image */
+/* Overlay text on image */
 .overlay-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  background: rgba(0, 0, 0, 0.6); 
+  background: rgba(0, 0, 0, 0.6);
   padding: 15px;
   border-radius: 5px;
   text-align: center;
   width: 80%;
 }
 
-/* Ensure text is readable */
 .overlay-text h2,
 .overlay-text p {
   margin: 0;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
+
+/* Typography */
 h1,
 h2,
 h3,
@@ -179,6 +147,65 @@ p,
 a {
   font-family: "Times New Roman", Times, serif;
 }
+
 a:hover {
-  color: rgb(209, 27, 27); 
+  color: rgb(209, 27, 27);
+}
+
+/* ---------- Responsive Enhancements ---------- */
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+    float: none;
+    margin: 20px auto;
+  }
+
+  .class-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .class-container img {
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .overlay-text {
+    width: 90%;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .class-info h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    width: 90%;
+  }
+
+  input,
+  button {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .overlay-text {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .class-container img {
+    height: 180px;
+  }
 }

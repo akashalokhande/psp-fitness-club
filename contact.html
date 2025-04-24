@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Fitness Club</title>
     <link
-    rel="icon"
-    href="./images/ChatGPT Image Apr 18, 2025, 02_48_19 PM.png"
-    type="image/png"
-  />
+      rel="icon"
+      href="./images/ChatGPT Image Apr 18, 2025, 02_48_19 PM.png"
+      type="image/png"
+    />
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
@@ -16,34 +16,50 @@
   <body>
     <header class="main-header">
       <div class="logo-container">
-       <a href="./index.html">
-        <img
-          src="./images/Screenshot 2025-03-11 213914.png"
-          alt="Fitness Club Logo"
-          class="logo"
-        />
-      </a>
+        <a href="./index.html">
+          <img
+            src="./images/Screenshot 2025-03-11 213914.png"
+            alt="Fitness Club Logo"
+            class="logo"
+          />
+        </a>
         <h1>Fitness Club</h1>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li id="loginLink"><a href="login.html">Log In</a></li>
-          <li id="signupLink"><a href="signup.html">Sign Up</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li id="adminLoginLink"><a href="admin-login.html">Admin Login</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li id="classesbtn" style="display: none"><a href="classes.html">Classes</a></li>
-          <li id="userDropdown" class="dropdown" style="display: none;">
-            <a href="#" class="dropbtn" id="userDropdownBtn">👤 User</a>
-            <div class="dropdown-content" id="dropdownContent">
-              <p id="dropdownUsername">Name: -</p>
-              <p id="dropdownUserPlan">Plan: -</p>
-            </div>
-          </li>
-          <li id="logoutBtn" style="display: none;">Logout</li>
-        </ul>
-      </nav>
+
+      <div>
+        <!-- Hamburger Button for mobile -->
+        <div class="hamburger-container">
+          <div class="hamburger" id="hamburgerBtn">&#9776;</div>
+          <div class="close-btn" id="closeBtn" style="display: none">
+            &times;
+          </div>
+        </div>
+
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li id="loginLink"><a href="login.html">Log In</a></li>
+            <li id="signupLink"><a href="signup.html">Sign Up</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li id="adminLoginLink">
+              <a href="admin-login.html">Admin Login</a>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li id="classesbtn" style="display: none">
+              <a href="classes.html">Classes</a>
+            </li>
+            <li id="userDropdown" class="dropdown" style="display: none">
+              <a href="#" class="dropbtn" id="userDropdownBtn">👤 User</a>
+              <div class="dropdown-content" id="dropdownContent">
+                <p id="dropdownUsername">Name: -</p>
+                <p id="dropdownUserPlan">Plan: -</p>
+              </div>
+            </li>
+            <li id="userName" style="display: none; color: green"></li>
+            <li id="logoutBtn" style="display: none">Logout</li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <h2>PSP FITNESS CLUB</h2>
