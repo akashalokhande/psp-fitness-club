@@ -8,7 +8,7 @@ adminLoginForm?.addEventListener("submit", async function (e) {
   const password = document.getElementById("password").value;
 
   try {
-    const res = await fetch("http://localhost:3000/api/admin-login", {
+    const res = await fetch("https://psp-fitness-server.onrender.com/api/admin-login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),

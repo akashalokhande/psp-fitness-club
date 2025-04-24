@@ -11,7 +11,7 @@ loginForm.addEventListener("submit", async function (e) {
   loginMessage.style.color = "black";
 
   try {
-    const response = await fetch("http://localhost:3000/login", {
+    const response = await fetch("https://psp-fitness-server.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +29,7 @@ loginForm.addEventListener("submit", async function (e) {
       localStorage.setItem("fitnessUser", JSON.stringify(user));
 
       // ✅ Now fetch the user's plan
-      const planResponse = await fetch(`http://localhost:3000/api/userPlan/${user._id}`);
+      const planResponse = await fetch(`https://psp-fitness-server.onrender.com/api/userPlan/${user._id}`);
       const planData = await planResponse.json();
 
       console.log(planData);

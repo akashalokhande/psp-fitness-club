@@ -59,7 +59,7 @@ paymentForm.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch("http://localhost:3000/api/payment", {
+    const response = await fetch("https://psp-fitness-server.onrender.com/api/payment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -77,7 +77,7 @@ paymentForm.addEventListener("submit", async (e) => {
 
       try {
         const planRes = await fetch(
-          `http://localhost:3000/api/userPlan/${storedUser._id}`
+          `https://psp-fitness-server.onrender.com/api/userPlan/${storedUser._id}`
         );
         const planData = await planRes.json();
 

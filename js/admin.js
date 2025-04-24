@@ -1,7 +1,7 @@
 // Fetch payment submissions
 async function fetchPayments() {
   try {
-    const response = await fetch("http://localhost:3000/api/payment");
+    const response = await fetch("https://psp-fitness-server.onrender.com/api/payment");
     const data = await response.json();
     const tableBody = document.querySelector("#paymentTable tbody");
     tableBody.innerHTML = "";
@@ -26,7 +26,7 @@ async function fetchPayments() {
 // Fetch contact submissions
 async function fetchContacts() {
   try {
-    const response = await fetch("http://localhost:3000/api/contact");
+    const response = await fetch("https://psp-fitness-server.onrender.com/api/contact");
     const data = await response.json();
     const tableBody = document.querySelector("#contactTable tbody");
     tableBody.innerHTML = "";
